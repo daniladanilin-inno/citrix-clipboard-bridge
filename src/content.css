@@ -1,0 +1,9 @@
+#citrix-clipboard-bridge-toast {
+  position: fixed; z-index: 2147483647; right: 18px; bottom: 18px;
+  max-width: 330px; padding: 10px 13px; border: 1px solid #bfcee3;
+  border-radius: 8px; background: #10243d; color: #fff;
+  box-shadow: 0 5px 22px #0004; font: 13px/1.35 system-ui, sans-serif;
+  opacity: 0; transform: translateY(8px); transition: opacity .18s, transform .18s;
+  pointer-events: none;
+}
+#citrix-clipboard-bridge-toast.visible { opacity: 1; transform: translateY(0); }

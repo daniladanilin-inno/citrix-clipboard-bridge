@@ -1,0 +1,7 @@
+{
+  "name": "citrix-clipboard-bridge",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "bun run build.ts", "dev": "bun run build.ts --watch" },
+  "devDependencies": { "typescript": "^5.7.2" }
+}

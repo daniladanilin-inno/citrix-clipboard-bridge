@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Citrix Clipboard Bridge",
+  "description": "Automatic host clipboard synchronization for Citrix Workspace in Chrome.",
+  "version": "0.1.0",
+  "permissions": ["clipboardRead", "clipboardWrite", "storage", "tabs", "offscreen", "sidePanel", "nativeMessaging"],
+  "host_permissions": ["__PORTAL_ORIGIN__/*"],
+  "action": { "default_title": "Citrix Clipboard Bridge", "default_popup": "popup.html" },
+  "side_panel": { "default_path": "popup.html" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [{
+    "matches": ["__PORTAL_ORIGIN__/*"],
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }],
+  "commands": {
+    "open-bridge": {
+      "suggested_key": { "default": "Ctrl+Shift+Y", "linux": "Ctrl+Shift+Y" },
+      "description": "Open Citrix Clipboard Bridge"
+    }
+  }
+}

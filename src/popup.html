@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Citrix Clipboard Bridge</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">CITRIX CLIPBOARD BRIDGE</div>
+      <h1>Clipboard bridge</h1>
+      <p class="muted">Automatically sync clipboard text with Citrix.</p>
+      <label class="live-row"><input id="liveMode" type="checkbox" /> <span><strong>Automatic sync</strong><small>Monitor host and Citrix clipboard changes</small></span></label>
+      <label class="live-row"><input id="keepOpen" type="checkbox" /> <span><strong>Keep open</strong><small>Use Chrome’s persistent side panel</small></span></label>
+      <section class="status-card">
+        <div class="status-line"><span id="statusDot" class="dot"></span><strong id="status">Disabled</strong></div>
+        <div id="detail" class="detail">Turn on automatic sync to begin.</div>
+      </section>
+      <div class="section-title">Latest clipboard content</div>
+      <pre id="preview" class="preview">Nothing captured yet.</pre>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
