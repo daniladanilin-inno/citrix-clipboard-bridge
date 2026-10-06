@@ -34,7 +34,8 @@ async function pollPanelClipboard() {
       preview.textContent = text;
     }
   } catch {
-    detail.textContent = "Clipboard access is unavailable in this Chrome context.";
+    // Unfocused side panels may not receive browser clipboard permission.
+    // The native X11 helper is the always-on clipboard path.
   }
 }
 
